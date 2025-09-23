@@ -1,0 +1,28 @@
+.blog-slider{
+    width: 361px;
+    height: 480px;
+
+}
+.blog-container{
+    background-color: #F7F7F7;
+    padding: 1em;
+        text-align: left;
+}
+
+.blog-container p{
+    color: gray;
+}
+
+.blog-slider .slick-dots{
+
+  bottom: 0;
+  right: 20px;      /* cola no canto direito */
+  left: auto;       
+  width: auto;      
+  text-align: right;
+}
+
+.blog-slider .slick-dots li{
+ margin: 0 .5px; /*ajusta o espaçamento entre os dots*/
+ width: 10px; /*diminui o espaço do li para paroximar mais*/
+}

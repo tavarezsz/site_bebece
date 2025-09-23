@@ -1,0 +1,50 @@
+.product-card-container{
+    width: 220px;
+    height: 180px; //tive que fazer diferente do que esta no figma por não caber toda informação
+    gap: 10px;
+    margin: 10px 10px;
+}
+
+.product-image-container{
+
+    position: relative;
+    background-color: #F7F7F7;
+
+}
+
+.icon-top{
+    position: absolute;
+    border: none;
+    background: none;
+    background-color: #FFFFFF;
+    top: 10px;
+    right: 10px;
+    width: 24;
+    height: 24;
+}
+.icon-bottom{
+    position: absolute;
+    border: none;
+    background: none;
+    bottom: 10px;
+    right: 10px;
+    width: 24;
+    height: 24;
+}
+.discount-percent{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    color: #B11B25;
+}
+
+.price{
+    font-size: large;
+    font-weight: 400;
+
+}
+
+.price span{
+    color: grey;
+    text-decoration: line-through;
+}

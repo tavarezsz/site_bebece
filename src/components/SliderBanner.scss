@@ -1,0 +1,35 @@
+.banner-container {
+    width: 100%;
+}
+
+.banner-image{
+    width: 393px;
+    height: 698px;
+    opacity: 1;
+}
+.banner-container .slick-dots{
+
+  bottom: 10px;
+  right: 20px;      /* cola no canto direito */
+  left: auto;       
+  width: auto;      
+  text-align: right;
+}
+
+.banner-container .slick-dots li{
+ margin: 0 .5px; /*ajusta o espaçamento entre os dots*/
+ width: 10px; /*diminui o espaço do li para paroximar mais*/
+}
+
+.banner-button{
+    border: solid 2px #FFFFFF;
+    color: #FFFFFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: transparent;
+    position: absolute;
+    bottom: 5px;
+    left: 20px
+}
