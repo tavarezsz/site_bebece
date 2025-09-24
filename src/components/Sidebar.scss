@@ -1,0 +1,141 @@
+.menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+}
+
+/* Overlay para escurecer a tela atras do sidebar quando ativo */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Sidebar */
+
+.sidebar-header{
+  position: relative;
+  padding: 20px;
+}
+
+.sidebar-header button{
+  position: absolute;
+  right: 20px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 331px;
+  background: #FFFFFF;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+  transform: translateX(-100%); /*o componente é renderizado fora da area visivel da tela, à esquerda*/
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  transform: translateX(0);/*quando aberto, puxa o coponente para a área visível*/
+}
+
+.close-btn {
+
+  font-size: 20px;
+  background: #EEEEEE;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Estilização do menu */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin: 15px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.sidebar-button {
+  font-size: 18px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.submenu li {
+  padding-left: 20px;
+  font-size: 14px;
+  color: grey;
+}
+
+.outlet {
+  color: #B11B25;
+
+}
+
+/*banner do sidebar*/
+
+/*corta a imagem para mostrar os 120px de baixo*/
+.sidebar-banner{
+
+  position: relative;
+  width: 331px;
+  height: 120px;
+  background-image: url("../../public/static/images/banner-principal-1.png");
+  background-size: cover;
+  background-position: bottom;
+}
+
+
+.sidebar-banner p{
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  color: #FFFFFF;
+
+}
+.sidebar-banner a{
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  color: #FFFFFF;
+  font-weight: 200;
+  font-size: 14px;
+}

@@ -1,26 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick';
 import './BannerCategorias.scss'
+import { getCategories } from '../utils';
 
 function BannerCategorias() {
     var settings = {
+    className:'slider-categorias',
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     draggable: true,
     swipe: true,
     touchMove: true,
+    variableWidth:true
     
-  };
+  }
 
-  const categorias = [ //organizando em lista de objetos para facilitar recebimento por função/api
-    {nome: "Botas", imagem: "static/images/categorias/banner-botas.png"},
-    {nome: "Scarpins", imagem: "static/images/categorias/banner-scarpins.png" },
-    {nome: "Sapatilhas", imagem: "static/images/categorias/banner-sapatilhas.png"},
-    {nome: "Sandálias", imagem: "static/images/categorias/banner-sandalias.png"}
-  ]
+  const [categorias, setCategorias] = useState([])  
+
+  //Simula o carregamento dos dados de um API, para flexibilidade em adicionar/excluir categorias
+  useEffect(() => {
+      async function fetchCategories(){
+      setCategorias(await getCategories())
+      }
+      fetchCategories()
+  },[])
+
 
   return (
     <div className="categorias-container">

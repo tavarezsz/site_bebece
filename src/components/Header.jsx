@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Header.scss'
 
-function Header() {
+function Header({onMenuClick}) {
 
     const [isScrolled,setIsScrolled] = useState(false)
 
@@ -24,7 +24,7 @@ function Header() {
   return (
     //a classe do header muda de acordo com o state isScrolled
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}> 
-        <button className="icon">
+        <button className="icon" onClick={onMenuClick}>
             <img src="/static/images/icons/icone-menu.svg" alt="Menu"/>
         </button>
         <button className="icon">

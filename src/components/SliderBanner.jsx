@@ -14,17 +14,19 @@ function SliderBanner() {
   return (
     <div className="banner-container">
         <Slider {...settings}>
-        <div>
+        <div className='banner-card'>
             <img src="/static/images/banner-principal-1.png" alt="" className="banner-image" />
+            <button className="banner-button">Conheça Agora</button>
         </div>
-        <div>
+        <div className='banner-card'>
             <img src="/static/images/banner-principal-2.png" alt="" className="banner-image" />
+            <button className="banner-button">Ver coleção completa</button>
         </div>
         <div>
             <img src="/static/images/banner-principal-3.png" alt="" className="banner-image" />
         </div>
         </Slider>
-        <button className="banner-button">Conheça Agora</button>
+
     </div>
   );
 }
