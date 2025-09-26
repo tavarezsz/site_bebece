@@ -8,24 +8,43 @@ import BannerNavegacao from './components/BannerNavegacao';
 import ProductSlider from './components/ProductSlider';
 import BlogSlider from './components/BlogSlider';
 import Sidebar from './components/Sidebar';
+import Message from './components/Message';
 
 function App() {
 
   const [SidebarOpen, setSidebarOpen] = useState(false) //controla o estado da sidebar de fora dos componentes
-  return (
-    <div>
-    <Header onMenuClick={() => setSidebarOpen(true)}/>
-    <div className="App">
+  const [showMessage, setShowMessage] = useState(false) //controla o estado do popu de mensagem
+  const [cartItens, setCartItens] = useState(0) //contador de itens do carrinho
 
-      <SliderBanner/>
-      <BannerCategorias/>
-      <BannerNavegacao/>
-      <ProductSlider/>
-      <BlogSlider/>
-      <Footer/>
-      <Sidebar isOpen={SidebarOpen} onClose={() => setSidebarOpen(false)}/>
-    </div>
-    </div>
+
+
+  return (
+  <div>
+    <Header cartCounter={cartItens} onMenuClick={() => setSidebarOpen(true)}/>
+      <div className="App">
+
+        <SliderBanner/>
+        <BannerCategorias/>
+        <BannerNavegacao/>
+        <ProductSlider onAddtoCart={() => 
+        {
+          setShowMessage(true)
+          setCartItens(cartItens+1)
+        }}/>
+        <BlogSlider/>
+        <Footer/>
+        <Sidebar isOpen={SidebarOpen} onClose={() => setSidebarOpen(false)}/>
+
+        {/* Renderiza o componente de mensagem so quando ativo*/}  
+        {showMessage && (
+          <Message
+            msg={"Adicionado ao Carrinho"}
+            onClose={() => setShowMessage(false)}
+          />   
+        )}
+
+      </div>
+  </div>
   );
 }
 

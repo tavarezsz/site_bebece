@@ -1,35 +1,82 @@
 .header{
     background-color: #FFFFFF;
     display: flex;
-    width: 393px;
-    height: 55px;
+    height: 30px;
     justify-content: space-between;
+    align-items: center;
     opacity: 1;
-    padding-top: 20px;
-    padding-right: 16px;
-    padding-bottom: 20px;
-    padding-left: 16px;
-    border-bottom-width: 1px;
-
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    
     width: 100%;
+    max-width: 100vw;
     transition: background-color 0.3s ease;
 
+    padding: 20px 0;
     z-index: 1000;
 
 }
 .header.scrolled{
     background-color: transparent;
+    color: #FFFFFF;
+}
+.header.scrolled svg{ 
+    color: #FFFFFF;
+}
+
+.header.scrolled span{ 
+    color: #FFFFFF;
+}
+
+  .header-left,
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; // espaçamento pequeno entre ícones
+  }
+
+.header img{
+    position: absolute; /*logo fica sempre no meio*/
+    transform: translateX(-50%);
+    left: 50%;
+    width: 102px;
+    height: 24px;
 }
 
 .icon{
+    background: none;
     border: none;
-    background: grey;
-    width: 14;
-    height: 14;
+    display: flex;
+    align-items: center;
 }
+.icon svg{
+    background-color: transparent;
+    color: black;
+    padding: 0;
+    margin: 0 4px;
+    width: 14px;
+    height: 14px;
+}
+
+.cart-icon {
+  position: relative; // para posicionar o contador dentro
+}
+
+.cart-counter {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  color: black;
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 2px 6px;
+  line-height: 1;
+  min-width: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 

@@ -15,6 +15,7 @@ function BlogSlider() {
 
   const [posts,setPosts] = useState([])
 
+  //carrega os posts a cada montagem do componente
   useEffect(()=>{
     async function fetchPosts(){
       setPosts(await getBlogPosts())

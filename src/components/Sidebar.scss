@@ -19,6 +19,8 @@
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 999;
+
+  max-width: 100vw;
 }
 
 .overlay.show {
@@ -71,6 +73,11 @@
   margin: 0;
 }
 
+.menu p{
+  font-size: 18px;
+  margin-left: 20px;
+}
+
 .menu li {
   margin: 15px;
 }
@@ -107,16 +114,14 @@
 
 .outlet {
   color: #B11B25;
-
 }
 
 /*banner do sidebar*/
-
-/*corta a imagem para mostrar os 120px de baixo*/
 .sidebar-banner{
 
   position: relative;
   width: 331px;
+  /*corta a imagem para mostrar os 120px de baixo*/
   height: 120px;
   background-image: url("../../public/static/images/banner-principal-1.png");
   background-size: cover;

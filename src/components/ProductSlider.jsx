@@ -2,28 +2,18 @@ import React from 'react'
 import { getProducts } from '../utils'
 import ProductCard from './ProductCard'
 import Slider from 'react-slick'
+import './ProductSlider.scss'
 
 const products = await getProducts()
 
-function ProductSlider() {
+function ProductSlider({onAddtoCart}) {
    var settings = {
     className: "product-slider",
     Infinite: false,
     slidesToShow: 2,
     slidesToScroll: 1,
     centeMode:true,
-    variableWidth: true,
-
-
-    responsive: [ //ajuste para tela mobile
-        {
-            breakpoint : 480,
-            settings: {
-                slidesToShow: 2,
-            }
-        }
-    ]
-
+    variableWidth: true, //Necessario para mostar o produtos que não cabem, de forma "cortada"
   }
   return (
     <div className='products-container'>
@@ -34,6 +24,7 @@ function ProductSlider() {
             name = {prod.name}
             image = {prod.image}
             price={prod.price}
+            onAdd={onAddtoCart}
             />
         ))}
         </Slider>

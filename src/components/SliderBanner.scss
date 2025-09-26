@@ -1,9 +1,10 @@
 .banner-container {
     width: 100%;
+    max-width: 100vw;
 }
 
 .banner-image{
-    width: 393px;
+    width: 100%;
     height: 698px;
     opacity: 1;
 }
@@ -22,6 +23,16 @@
  width: 10px; /*diminui o espaço do li para paroximar mais*/
 }
 
+
+/*Mudar a cor dos dots do slide para branco*/
+.banner-container .slick-dots li button::before{
+ color: #FFFFFF;
+}
+.banner-container .slick-dots li.slick-active button:before {
+  color: #FFFFFF;        // cor do dot ativo
+  opacity: 1;        // destaque maior
+}
+
 .banner-card{
     position: relative;
 }
@@ -31,11 +42,13 @@
 
     border: solid 2px #FFFFFF;
     color: #FFFFFF;
+
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 25px;
     padding-right: 25px;
-    background: transparent;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px); //efeito de desfoque
     position: absolute;
     text-decoration: underline;
     bottom: 20px;

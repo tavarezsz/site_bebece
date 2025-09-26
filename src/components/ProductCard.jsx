@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './ProductCard.scss'
 
-function ProductCard({name,image,price}) {
+function ProductCard({name,image,price, onAdd}) {
+    const [heartClicked,setHeartClicked] = useState(false) //controla o estado do icone de coração
+
+    //Inverte o estado quando clicka no icone de coração
+    const handleHeartClick = function(){
+        if(heartClicked)
+            setHeartClicked(false)
+        else
+            setHeartClicked(true)
+    }
+
     const amount = price.amount
     const isDiscount = price.isDiscount
     let discount
@@ -12,13 +22,13 @@ function ProductCard({name,image,price}) {
     <div className='product-card-container'>
         
         <div className='product-image-container'>
-            <button className='icon-top'>
-                <img src="/static/images/icons/coracao.svg" alt="" />
+            <button className='icon-top' onClick={handleHeartClick}>
+                <img src={ !heartClicked ? "/static/images/icons/coracao.svg" : "/static/images/icons/coracao2.svg"} alt="" />
             </button>
 
             <img src={image} alt="" />
 
-            <button className='icon-bottom'>
+            <button className='icon-bottom' onClick={onAdd}>
                 <img src="/static/images/icons/adicionar-carrinho.svg" alt="" />
             </button>
             {discount && <p className='discount-percent'>%{discount} OFF</p>}

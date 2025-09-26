@@ -10,7 +10,7 @@ function Footer() {
   return (
     <footer className='footer-container'>
         <div className='logo-container'>
-        <   img src="static/images/logos/logo-branco.png" alt="Bebecê" />
+        <img src="static/images/logos/logo-branco-grande.png" alt="Bebecê" />
         </div>
         <div className='icon-container'>
             <BsInstagram  className='social-icon'/>

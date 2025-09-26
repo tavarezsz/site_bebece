@@ -3,8 +3,7 @@ import './BannerNavegacao.scss'
 
 function BannerNavegacao() {
   return (
-    <div>
-
+    <div className='banner-navegacao'>
       <img src="/static/images/banners/banner-navegacao-1.png" alt="banner pequeno" className='small-banner' />   
         <img src="/static/images/banners/banner-navegacao-2.png" alt="banner grande" className='big-banner'/>   
     </div>

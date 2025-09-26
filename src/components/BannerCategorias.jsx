@@ -4,12 +4,14 @@ import './BannerCategorias.scss'
 import { getCategories } from '../utils';
 
 function BannerCategorias() {
-    var settings = {
+
+  //configurações padrão do slider, da documentação oficial
+  var settings = {
     className:'slider-categorias',
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 2, 
     slidesToScroll: 1,
     draggable: true,
     swipe: true,

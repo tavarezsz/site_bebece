@@ -35,7 +35,7 @@ export default function Sidebar({isOpen, onClose}) {
 
         <nav>
           <ul className="menu">
-            <li>Liquida</li>
+            <p>Liquida</p>
 
             <li>
               <button className="sidebar-button" onClick={() => toggleSubmenu("sapatos")}>
@@ -97,7 +97,7 @@ export default function Sidebar({isOpen, onClose}) {
               )}
             </li>
 
-            <li className="outlet">Outlet</li>
+            <p className="outlet">Outlet</p>
 
           </ul>
         </nav>

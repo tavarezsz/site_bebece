@@ -1,9 +1,12 @@
 .blog-slider{
-    width: 361px;
+    width: 100%;
+    max-width: 100vw;
     height: 480px;
+
 
 }
 .blog-container{
+    max-width: 100vw;
     background-color: #F7F7F7;
     padding: 1em;
     text-align: left;
