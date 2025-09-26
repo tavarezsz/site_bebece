@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  max-width: 100vw;
+  max-width: 100vw; /*seta o width maximo como a visualização maxima do aparelho, evita espaços em branco nas bordas da tela*/
   overflow-x: hidden;
 
   margin: 0;
