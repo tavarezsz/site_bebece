@@ -13,7 +13,7 @@ import Message from './components/Message';
 function App() {
 
   const [SidebarOpen, setSidebarOpen] = useState(false) //controla o estado da sidebar de fora dos componentes
-  const [showMessage, setShowMessage] = useState(false) //controla o estado do popu de mensagem
+  const [showMessage, setShowMessage] = useState(false) //controla o estado do popup de mensagem
   const [cartItens, setCartItens] = useState(0) //contador de itens do carrinho
 
 
